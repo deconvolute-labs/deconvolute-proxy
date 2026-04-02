@@ -1,0 +1,15 @@
+version: "2.0"
+default_action: block
+
+servers:
+  your-server-name:
+    tools:
+      - name: "list_issues"
+        action: allow
+      - name: "get_issue"
+        action: allow
+      - name: "search_code"
+        action: allow
+        condition: 'args.query.contains("repo:your-org/your-repo")'
+      - name: "*"
+        action: block
