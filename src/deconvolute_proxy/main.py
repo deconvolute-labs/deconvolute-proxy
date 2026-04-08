@@ -32,7 +32,8 @@ async def lifespan(app: Starlette):
     os.environ["DECONVOLUTE_CACHE_DIR"] = settings.deconvolute_cache_dir
     if settings.deconvolute_api_key:
         os.environ["DECONVOLUTE_API_KEY"] = settings.deconvolute_api_key
-
+    if settings.agent_id:
+        logger.info(f"Found Agent ID: '{settings.agent_id}'")
     logger.info("Connecting to upstream GitHub MCP server...")
     service = UpstreamService(settings)
     await service.connect()
