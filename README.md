@@ -36,9 +36,8 @@ Agent runtimes like Cowork connect directly to MCP servers. There is no layer be
 
 `deconvolute-proxy` provides that layer. It enforces a least-privilege policy on the MCP tool call surface, independent of the agent runtime, the MCP server, and the underlying model.
 
-For a detailed breakdown of what this addresses and where it fits relative to
-tools like NVIDIA OpenShell, see the [blog post](https://deconvolutelabs.com/blog/nvidia-openshell-mcp-protocol-layer?utm_source=github.com&utm_medium=readme_body&utm_campaign=proxy).
-A hands-on demo using Claude Cowork and GitHub MCP is documented in [the demo repo](https://github.com/deconvolute-labs/mcp-deconvolute-demo/tree/main/scenarios/policy_enforcement_cowork).
+For a detailed breakdown of what this addresses and where it fits relative to tools like NVIDIA OpenShell, see the [blog post](https://deconvolutelabs.com/blog/nvidia-openshell-mcp-protocol-layer?utm_source=github.com&utm_medium=readme_body&utm_campaign=proxy).
+A hands-on demo using Claude Cowork and GitHub MCP is documented in [the demo repo](https://github.com/deconvolute-labs/mcp-deconvolute-demo/tree/main/scenarios/policy_enforcement_cowork) and explained with more background in the [blog post about the proxy](https://deconvolutelabs.com/blog/mcp-policy-enforcement-claude-cowork-live-demo?utm_source=github.com&utm_medium=readme_body&utm_campaign=proxy).
 
 ## How it works
 
@@ -202,3 +201,4 @@ Contributions and feedback welcome via [GitHub Issues](https://github.com/deconv
 - [Deconvolute SDK](https://github.com/deconvolute-labs/deconvolute)
 - [Deconvolute docs](https://docs.deconvolutelabs.com?utm_source=github.com&utm_medium=readme_related&utm_campaign=proxy)
 - [Demo scenarios](https://github.com/deconvolute-labs/mcp-deconvolute-demo)
+- Blog post: [How to Control What Your AI Agents Can Do](https://deconvolutelabs.com/blog/mcp-policy-enforcement-claude-cowork-live-demo?utm_source=github.com&utm_medium=readme_related&utm_campaign=proxy)
