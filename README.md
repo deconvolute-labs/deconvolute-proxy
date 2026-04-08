@@ -113,6 +113,16 @@ The server name must match what the upstream MCP server reports during the initi
 
 See the [Deconvolute SDK docs](https://docs.deconvolutelabs.com?utm_source=github.com&utm_medium=readme_body&utm_campaign=proxy) for the full policy syntax reference.
 
+### Agent ID
+
+Set `AGENT_ID` in `.env` to identify which agent runtime is connecting to this proxy instance. This value is attached to every audit event and surfaces in the enterprise platform dashboard, allowing security teams to filter and group activity by agent.
+
+```bash
+AGENT_ID=some_id
+```
+
+If not set, events are recorded without an agent identifier. Automatic agent identification is planned for a future release.
+
 ## Running
 
 Terminal 1:

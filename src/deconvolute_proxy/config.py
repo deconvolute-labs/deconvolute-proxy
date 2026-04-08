@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     port: int = 8000
     policy_path: str = "policy.yaml"
     deconvolute_api_key: str | None = None
+    agent_id: str | None = None
 
 
 @functools.lru_cache

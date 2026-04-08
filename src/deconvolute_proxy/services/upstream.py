@@ -61,7 +61,11 @@ class UpstreamService:
         logger.debug(
             "Wrapping session with mcp_guard (policy: %s)", self._settings.policy_path
         )
-        self._session = mcp_guard(raw_session, policy_path=self._settings.policy_path)
+        self._session = mcp_guard(
+            raw_session,
+            policy_path=self._settings.policy_path,
+            agent_id=self._settings.agent_id,
+        )
         init_result = await self._session.initialize()
         logger.info("MCP session initialized.")
         logger.info("GitHub server name: %s", init_result.serverInfo.name)
